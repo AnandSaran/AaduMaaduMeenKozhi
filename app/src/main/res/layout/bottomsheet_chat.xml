@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.aadu_maadu_kozhi.gregantech.view.fragment.ChatBottomSheet" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/grey">
+
+     <!--   <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            android:elevation="0dp"
+            android:minHeight="?attr/actionBarSize"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:elevation="@dimen/dp_6"
+            app:titleTextColor="@android:color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/chat"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_18" />
+        </androidx.appcompat.widget.Toolbar>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvChatList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_chatbox"
+            android:layout_below="@+id/toolbar"
+
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Loading chat...."
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_16" />
+
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layout_chatbox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPadding="@dimen/dp_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtChatMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="Write your content"
+                    android:inputType="textCapSentences"
+                    android:maxLines="6"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageButton
+                    android:id="@+id/btnChatSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="bottom"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="@{handlers::onClick}"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    app:srcCompat="@drawable/ic_send"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>
+
+
+    <!--  <?xml version="1.0" encoding="utf-8"?>
+  <layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:card_view="http://schemas.android.com/apk/res-auto"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+      <variable
+          name="handlers"
+          type="com.aadu_maadu_kozhi.gregantech.view.fragment.UserPostCommentBottomSheet" />
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:background="@android:color/white"
+      android:layout_height="match_parent"
+      >
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rvCommentList"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          card_view:layout_constraintBottom_toTopOf="@+id/layout_chatbox">
+
+      </androidx.recyclerview.widget.RecyclerView>
+      <TextView
+          android:layout_width="match_parent"
+          android:gravity="center"
+          android:textSize="@dimen/sp_16"
+          android:id="@+id/tvMessage"
+          card_view:layout_constraintBottom_toTopOf="@+id/view"
+          android:text="Loading comments...."
+          android:textColor="@android:color/black"
+          android:layout_height="300dp" />
+
+      &lt;!&ndash; A horizontal line between the chatbox and RecyclerView &ndash;&gt;
+      <View
+          android:id="@+id/view"
+          android:layout_width="0dp"
+          android:layout_height="2dp"
+          android:background="#dfdfdf"
+          app:layout_constraintBottom_toTopOf="@+id/layout_chatbox"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent" />
+
+      <LinearLayout
+          android:id="@+id/layout_chatbox"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:minHeight="48dp"
+          android:background="#ffffff"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent">
+
+          <EditText
+              android:id="@+id/edtComments"
+              android:hint="Enter message"
+              android:background="@android:color/transparent"
+              android:layout_gravity="center"
+              android:layout_marginLeft="16dp"
+              android:layout_marginRight="16dp"
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content"
+              android:maxLines="6"/>
+
+          <Button
+              android:id="@+id/btnComment"
+              android:text="Comment"
+              android:textSize="14sp"
+              android:onClick="@{handlers::onClick}"
+
+              android:background="?attr/selectableItemBackground"
+              android:clickable="true"
+              android:layout_width="wrap_content"
+              android:layout_height="48dp"
+              android:gravity="center"
+              android:layout_gravity="bottom" />
+
+      </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+  </layout>-->

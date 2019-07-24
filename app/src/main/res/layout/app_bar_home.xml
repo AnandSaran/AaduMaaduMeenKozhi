@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:contentInsetStart="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:elevation="@dimen/dp_6"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:elevation="@dimen/dp_6"
+
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:animateLayoutChanges="true">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp_18" />
+
+                <Spinner
+                    android:id="@+id/spr_Area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <HorizontalScrollView
+            android:id="@+id/hsvMainMenu"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_8"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/rlNewsFeedParent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_circle_rb_un_select"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbNewsFeed"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:background="@drawable/newspaper"
+                        android:button="@android:color/transparent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlThagavalKalanchiyamParent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_circle_rb_un_select"
+
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbThagavalKalanchiyam"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:background="@drawable/book"
+                        android:button="@android:color/transparent" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlSuccessStoryParent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_circle_rb_un_select"
+
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbSuccessStory"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:background="@drawable/ic_goal"
+                        android:button="@android:color/transparent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAccessoriesParent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_circle_rb_un_select"
+
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbAccessories"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:background="@drawable/ic_scythe"
+                        android:button="@android:color/transparent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlDoctorParent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_circle_rb_un_select"
+
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbDoctor"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:background="@drawable/ic_stethoscope"
+                        android:button="@android:color/transparent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlFarmParent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_circle_rb_un_select"
+
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbFarm"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:background="@drawable/ic_farm"
+                        android:button="@android:color/transparent" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rlSellerParent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_circle_rb_un_select"
+
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbSeller"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:background="@drawable/ic_rupee_2"
+                        android:button="@android:color/transparent" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rlChatParent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_circle_rb_un_select"
+
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbChat"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:background="@drawable/ic_chat"
+                        android:button="@android:color/transparent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlProfileParent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_circle_rb_un_select"
+
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbProfile"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:background="@drawable/boy"
+                        android:button="@android:color/transparent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlLogoutParent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_circle_rb_un_select"
+
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbLogout"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:background="@drawable/ic_exit"
+                        android:button="@android:color/transparent" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        layout="@layout/content_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

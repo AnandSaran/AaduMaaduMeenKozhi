@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.aadu_maadu_kozhi.gregantech.view.fragment.ProfileFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/background"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_200"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rlImageViewParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_200"
+                    android:background="@drawable/bg_gradiant"
+
+                    />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_200">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/iv_profile"
+                        android:layout_width="@dimen/dp_150"
+                        android:layout_height="@dimen/dp_150"
+
+                        android:layout_centerInParent="true"
+                        android:onClick="@{handlers::onClick}"
+
+                        android:src="@drawable/profile_pic"
+                        app:civ_border_color="@color/semiTransparentWhite"
+                        app:civ_border_width="@dimen/dp_10" />
+
+                    <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+
+                        />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlImageViewParent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_10">
+
+                    <RelativeLayout
+                        android:id="@+id/rlName"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/ivEditTickName"
+                            android:enabled="false"
+                            android:fontFamily="sans-serif-condensed"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_18"
+                            tools:text="Bebe Rexha" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivEditTickName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+
+                            android:layout_centerVertical="true"
+                            android:onClick="@{handlers::onClick}"
+                            app:srcCompat="@drawable/ic_edit_black_24dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlEmailId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/rlName">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/ivEditTickEmailId"
+                            android:enabled="false"
+                            android:imeOptions="actionDone"
+
+                            android:singleLine="true"
+
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_14"
+                            tools:text="musician, singer, songwriter" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivEditTickEmailId"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:onClick="@{handlers::onClick}"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_edit_black_24dp" />
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLoginAsDoctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlEmailId"
+                        android:layout_marginTop="@dimen/sp_10"
+                        android:backgroundTint="@color/colorAccent"
+                        android:onClick="@{handlers::onClick}"
+                        android:padding="@dimen/dp_16"
+                        android:text="@string/login_as_doctor"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp_15" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLoginAsFarmOwners"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btnLoginAsDoctor"
+                        android:layout_marginTop="@dimen/sp_10"
+                        android:backgroundTint="@color/colorAccent"
+                        android:onClick="@{handlers::onClick}"
+                        android:padding="@dimen/dp_16"
+                        android:text="@string/login_as_farm_owners"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp_15" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLoginAsSellers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btnLoginAsFarmOwners"
+                        android:layout_marginTop="@dimen/sp_10"
+                        android:backgroundTint="@color/colorAccent"
+                        android:onClick="@{handlers::onClick}"
+                        android:padding="@dimen/dp_16"
+                        android:text="@string/login_as_sellers"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp_15" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

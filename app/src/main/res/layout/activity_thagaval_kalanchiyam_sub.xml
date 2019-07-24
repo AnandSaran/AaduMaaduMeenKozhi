@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.aadu_maadu_kozhi.gregantech.view.activity.ThagavalKalanchiyamSubActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_gradiant"
+
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            android:elevation="@dimen/dp_6"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:titleTextColor="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="@{handlers::onClick}"
+                    android:padding="@dimen/dp_10"
+                    app:srcCompat="@drawable/ic_keyboard_backspace_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/thagaval_kalanchiyam"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp_18" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/toolbar"
+
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/ADMOB_BANNER_THAGAVAL_KALANCHIYAM_SUB_SCREEN"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvThagavalList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/adView"
+            android:padding="@dimen/dp_5"
+
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="@dimen/fab_margin"
+            android:onClick="@{handlers::onClick}"
+            android:visibility="gone"
+            app:backgroundTint="@color/colorAccent"
+            app:srcCompat="@drawable/ic_add_white_24dp" />
+    </RelativeLayout>
+</layout>

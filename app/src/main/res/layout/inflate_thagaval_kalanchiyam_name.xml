@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.aadu_maadu_kozhi.gregantech.adapter.viewholder.ThagavalKalanchiyamNameViewHolder" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbName"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/sp_14"
+            android:onClick="@{handlers::onClick}"
+            tools:text="sasdffkjkdfkdfjkfdjkkdfsjkdsjkfjksdfjkjkdfskdfjafshjafshljhf"
+        android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_10" />
+    </RelativeLayout>
+</layout>

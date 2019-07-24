@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.aadu_maadu_kozhi.gregantech.adapter.viewholder.SuccessStoryViewHolder" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:onClick="@{handlers::onClick}"
+        card_view:cardBackgroundColor="#fafafa"
+        card_view:cardCornerRadius="4dp"
+
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:onClick="@{handlers::onClick}"
+                android:paddingLeft="@dimen/dp_10"
+
+                android:paddingTop="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_5"
+
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:justificationMode="inter_word"
+                android:onClick="@{handlers::onClick}"
+
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_10"
+
+                android:paddingBottom="@dimen/dp_5"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_15" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/mosaicLayout"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/tvContent"
+                android:onClick="@{handlers::onClick}">
+
+                <include
+                    android:id="@+id/mosaicLayoutOne"
+                    layout="@layout/inflate_user_post_image_one"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+            <!--  <com.aadu_maadu_kozhi.gregantech.customview.mosaiclayout.views.MosaicLayout
+                  android:id="@+id/mosaicLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+
+                  android:layout_below="@+id/tvUserPostContent">
+
+              </com.aadu_maadu_kozhi.gregantech.customview.mosaiclayout.views.MosaicLayout>-->
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/mosaicLayout"
+                android:layout_marginTop="@dimen/dp_5"
+
+                android:background="#dfdfdf" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                card_view:cardBackgroundColor="@android:color/white"
+
+                card_view:cardCornerRadius="4dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/ivShare"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:onClick="@{handlers::onClick}"
+                        android:padding="@dimen/dp_13"
+
+                        android:title="Share"
+                        app:srcCompat="@drawable/ic_share" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+
+                        <com.aadu_maadu_kozhi.gregantech.customview.likeanimation.LikeButtonView
+                            android:id="@+id/lbUSerPostLike"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+
+                            android:background="?attr/selectableItemBackground"
+                            android:onClick="@{handlers::onClick}" />
+
+                        <TextView
+                            android:id="@+id/tvLikeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_30"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_12"
+                            tools:text="1" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

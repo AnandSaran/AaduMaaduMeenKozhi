@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon_silhouette"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_chat"
+            android:visible="true"
+            android:icon="@drawable/ic_chat_black_24dp"
+            android:title="@string/chat" />
+        <item
+            android:id="@+id/nav_thagaval_kalanchiyam"
+            android:icon="@drawable/information"
+            android:title="@string/thagaval_kalanchiyam" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/boy"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_log_out_24dp"
+            android:title="@string/logout" />
+
+    </group>
+
+
+</menu>

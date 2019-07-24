@@ -1,0 +1,96 @@
+<resources>
+    <string name="network_wifi">Wi-Fi</string>
+    <string name="network_mobile">Mobile</string>
+    <string name="facebook_app_id">328388597730944</string>
+    <string name="fb_login_protocol_scheme">fb328388597730944</string>
+    <string name="client_id">252018562320-fk7e4ikpk0mriem83i22lsaavmakk82p.apps.googleusercontent.com</string>
+    <string name="client_secret">TMtrhtemxE65SxWeY5ulCvOj</string>
+    <string name="default_notification_channel_id">Default</string>
+    <string name="fcm_token">fcm_token</string>
+    <string name="ADMOB_APP_ID">ca-app-pub-5382701668407340~8863071656</string>
+    <!--<string name="ADMOB_APP_ID">ca-app-pub-6149315158921192~4980181636</string>-->
+    <!--  <string name="ADMOB_APP_ID">ca-app-pub-3940256099942544~3347511713</string>//Testing-->
+    <string name="ADMOB_HOME_SCREEN_BANNER_ADD">ca-app-pub-5382701668407340/7791093759</string>
+    <!--  <string name="ADMOB_HOME_SCREEN_BANNER_ADD">ca-app-pub-3940256099942544/6300978111</string>-->
+    //Testing
+    <!--<string name="ADMOB_BANNER_THAGAVAL_KALANCHIYAM_DETAILS_SCREEN">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ADMOB_BANNER_THAGAVAL_KALANCHIYAM_SUB_SCREEN">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="INTERSTITIAL_CREATE_POST_SUCCESS">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--<string name="ADMOB_BANNER_THAGAVAL_KALANCHIYAM_DETAILS_SCREEN">ca-app-pub-6149315158921192/7707660596</string>
+    <string name="ADMOB_BANNER_THAGAVAL_KALANCHIYAM_SUB_SCREEN">ca-app-pub-6149315158921192/3301511726</string>
+    <string name="INTERSTITIAL_CREATE_POST_SUCCESS">ca-app-pub-6149315158921192/6225265959</string>-->
+
+    <string name="ADMOB_BANNER_THAGAVAL_KALANCHIYAM_DETAILS_SCREEN">ca-app-pub-5382701668407340/9799623070</string>
+    <string name="ADMOB_BANNER_THAGAVAL_KALANCHIYAM_SUB_SCREEN">ca-app-pub-5382701668407340/7413132880</string>
+    <string name="INTERSTITIAL_CREATE_POST_SUCCESS">ca-app-pub-5382701668407340/1413387662</string>
+
+
+    <string name="FCM_API_KEY">AAAAOq16FRA:APA91bH_ioWU0sEyWQHMsy1R21KTPEUlG_ZOnW-WEh_Y53qvUpQbzpGkJCu_RwBZpfmCkwLbxqgi5Wclrh6bGczbJpTFozda8Rft-3UM3NlKS5gWFJVKuStLE38JEfZG7Guy5KJcExxX</string>
+
+
+    <string name="app_name">AMMK<!--Aadu Maadu Meen Kozhi--></string>
+    <string name="app_name_big">Aadu Maadu Meen Kozhi</string>
+    <string name="shared_preference_name">shared_preference_aadu_maadu_kozhi</string>
+    <string name="user_id">user_id</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">sjayjkm@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="submit">SUBMIT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_name">user_name</string>
+    <string name="user_profile_url">user_profile_url</string>
+    <string name="default_user_profile_img_url">https://firebasestorage.googleapis.com/v0/b/my-project-1536170502807.appspot.com/o/Default_Profile_image%2Fprofile_pic.png?alt=media&amp;token=8e8e3ae6-96bb-4345-b255-73a8af4c16d6</string>
+    <string name="enter_comments">Enter comments</string>
+    <string name="successfully_commented">Successfully Commented</string>
+    <string name="be_the_first_to_comment_this_post">Be the first to comment this post</string>
+    <string name="start_chat">Start chat</string>
+    <string name="enter_message">Enter message</string>
+    <!--  TODO  <string name="chat">Chat</string>-->
+    <string name="chat">உரையாடல்</string>
+    <string name="you">You</string>
+    <string name="user_email_id">user_email_id</string>
+    <string name="select_area">Select Area</string>
+    <string name="view_more">View more</string>
+    <string name="create_profile">Create profile</string>
+    <string name="create_post">Create Post</string>
+    <string name="all_area">All Area</string>
+    <string name="add_image">Add image</string>
+    <string name="title">Title</string>
+    <!--   TODO  <string name="thagaval_kalanchiyam">Thagaval Kalanchiyam</string>-->
+    <string name="thagaval_kalanchiyam">தகவல் களஞ்சியம்</string>
+    <!--   TODO <string name="profile">Profile</string>-->
+    <string name="profile">சுயவிவரம்</string>
+    <!-- TODO <string name="home">Home</string>-->
+    <string name="home">முகப்பு</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="activity_image_trans">activity_image_trans</string>
+    <string name="enter_content">Enter content</string>
+    <string name="content">Content</string>
+    <string name="activity_text_trans">activity_text_trans</string>
+    <string name="select_type">Select Type</string>
+    <string name="logout">வெளியேறு</string>
+    <string name="succss_stories">வெற்றி கதைகள்</string>
+    <string name="doctors">மருத்துவர்கள்</string>
+    <string name="fertilizers">உரங்கள்</string>
+    <string name="farm_holders">பண்ணையாளர்கள்</string>
+    <string name="sellers">விற்பனையாளர்கள்</string>
+    <string name="login_as_sellers">Login as Sellers</string>
+    <string name="login_as_farm_owners">Login as Farm owners</string>
+    <string name="login_as_doctor">Login as DOCTOR</string>
+    <string name="notification_channel_post_comments">User Post Comments</string>
+    <string name="notification_channel_post_likes">User Post Likes</string>
+    <string name="notification_channel_user_chat">User Chat</string>
+    <string name="notification_channel_user_post">User Post</string>
+    <string name="notification_channel_description_post_comments">User post comments</string>
+    <string name="notification_channel_description_post_likes">User post like</string>
+    <string name="notification_channel_description_user_chat">Chat</string>
+    <string name="notification_channel_description_user_post">Post</string>
+    <string name="accessories">உபகரணங்கள்</string>
+    <string name="news_feed">News Feed</string>
+</resources>

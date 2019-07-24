@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.LogInActivity">
+    <ImageView
+        android:id="@+id/background"
+        tools:src="@drawable/bg"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:gravity="center_vertical"
+android:textColor="@color/grey_lt"
+            android:text="(or)"
+            android:textSize="@dimen/sp_12" />
+
+        <Button
+            android:id="@+id/rlFbLogin"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_15"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:backgroundTint="@color/com_facebook_blue"
+            android:drawableLeft="@drawable/com_facebook_button_icon"
+            android:text="Sign in"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sign_in_button"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/com_facebook_blue"
+            android:padding="9dp"
+            android:visibility="gone">
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

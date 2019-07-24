@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.aadu_maadu_kozhi.gregantech.adapter.viewholder.ThagavalKalanchiyamViewHolder" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        card_view:cardCornerRadius="4dp"
+android:onClick="@{handlers::onClick}"
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivThagaval"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:transitionName="@string/activity_image_trans"
+
+
+                />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivThagaval"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_5"
+                android:maxLines="2"
+                android:paddingRight="@dimen/dp_5"
+                android:layout_centerVertical="true"
+                android:paddingTop="@dimen/dp_10"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16"
+                tools:text="klnasfknkasf koahsfk hkhasf jkh  hjkhasf jhjh asfjh jhhjaf jhafh jkhsf jkhasf " />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

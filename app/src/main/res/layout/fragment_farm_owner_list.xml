@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+<data>
+
+    <variable
+        name="handlers"
+        type="com.aadu_maadu_kozhi.gregantech.view.fragment.FarmOwnerListFragment" />
+</data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiant">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFarmOwnersList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvFarmOwnersEmptyMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Farm owner's list is empty"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_15"
+        android:visibility="gone" />
+</RelativeLayout>
+
+</layout>

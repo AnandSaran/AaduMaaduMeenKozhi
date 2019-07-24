@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#006300</color>
+
+    <color name="colorPrimary">#187218</color>
+    <color name="colorPrimaryPix">@color/colorPrimary</color>
+    <color name="colorPrimaryLightPix">#018901</color>
+    <color name="grey">#efefef</color>
+    <color name="grey_dark">#d9d9d9</color>
+    <color name="grey_lt">#f9f9f9</color>
+    <color name="colorAccent">#630063</color>
+    <color name="colorPrimary_trans">#92187218</color>
+    <color name="semiTransparentWhite">#40FFFFFF</color>
+
+</resources>

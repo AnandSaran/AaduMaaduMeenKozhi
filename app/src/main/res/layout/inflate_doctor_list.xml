@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.aadu_maadu_kozhi.gregantech.adapter.viewholder.DoctorsListViewHolder" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true"
+        >
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/ivUserProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/circle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@+id/ivUserProfile"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="4dp"
+
+                android:singleLine="true"
+                tools:text="John Doe"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivUserProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+
+                android:singleLine="true"
+                tools:text="John Doe"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivUserProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+android:visibility="gone"
+                android:singleLine="true"
+                tools:text="John Doe"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivUserProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMobileNumber"
+                android:layout_width="wrap_content"
+                android:drawableTint="@color/colorAccent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:drawablePadding="@dimen/dp_20"
+                android:drawableRight="@drawable/ic_call_black_24dp"
+                android:autoLink="phone"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivUserProfile"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="John Doe" />
+        </LinearLayout>
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

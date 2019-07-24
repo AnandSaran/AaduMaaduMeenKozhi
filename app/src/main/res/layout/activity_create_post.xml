@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:elastic="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.aadu_maadu_kozhi.gregantech.view.activity.CreatePostActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            android:elevation="@dimen/dp_6"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:titleTextColor="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="@{handlers::onClick}"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_10"
+                    app:srcCompat="@drawable/ic_keyboard_backspace_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/create_post"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp_18" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnSubmit"
+            android:layout_below="@+id/toolbar"
+            android:background="#f2f2f2"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10">
+
+                <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    card_view:cardCornerRadius="4dp"
+
+                    card_view:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:contentPadding="@dimen/dp_5">
+
+                    <EditText
+                        android:id="@+id/edtPostContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:hint="Write content"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:justificationMode="inter_word"
+                        android:minLines="10"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/tvPostContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@android:color/transparent"
+                        android:justificationMode="inter_word"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/sp_15"
+                        android:visibility="gone" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/colorAccent"
+            android:onClick="@{handlers::onClick}"
+            android:text="@string/submit"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_15" />
+
+        <RelativeLayout
+            android:id="@+id/rlProgressLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:visibility="gone">
+
+            <is.arontibo.library.ElasticDownloadView
+                android:id="@+id/elastic_download_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:progress="1"
+                elastic:backgroundColor="@color/colorPrimaryDark" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>
